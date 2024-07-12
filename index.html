@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Currency Exchange</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/dollar-sign.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Currency Exchange</header>
+      <form action="#">
+        <div class="amount">
+          <p>Enter Amount</p>
+          <input type="text" value="">
+        </div>
+        <div class="drop-list">
+          <div class="from">
+            <p>From</p>
+            <div class="select-box">
+              <select> <!-- Options tag are inserted from JavaScript --> </select>
+            </div>
+          </div>
+          <div class="icon"><i class="fas fa-exchange-alt"></i></div>
+          <div class="to">
+            <p>To</p>
+            <div class="select-box">
+              <select> <!-- Options tag are inserted from JavaScript --> </select>
+            </div>
+          </div>
+        </div>
+        <div class="exchange-rate">Getting exchange rate...</div>
+        <button>Exchange</button>
+      </form>
+    </div>
+
+    <script src="country-list.js"></script>
+    <script src="script.js"></script>
+
+  </body>
+</html>
