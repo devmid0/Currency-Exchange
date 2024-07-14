@@ -4,6 +4,15 @@ const dropList = document.querySelectorAll("form select"),
       getButton = document.querySelector("form button"),
       exchangeIcon = document.querySelector("form .icon");
 
+for (let i = 0; i < dropList.length; i++) {
+    for (let currency_code in country_list) {
+        let selected = (i === 0 && currency_code === "USD") ? "selected" : "";
+        let optionTag = `<option value="${currency_code}" ${selected}>${currency_code}</option>`;
+        dropList[i].insertAdjacentHTML("beforeend", optionTag);
+    }
+    dropList[i].addEventListener("change", e => loadFlag(e.target));
+}
+
 window.addEventListener("load", getExchangeRate);
 getButton.addEventListener("click", e => {
     e.preventDefault();
